@@ -1,8 +1,15 @@
-﻿namespace EmployeeManagement.Test.Fixtures;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Xunit;
 
-[CollectionDefinition("EmployeeServiceCollection")]
-public class EmployeeServiceCollectionFixture
-    : ICollectionFixture<EmployeeServiceFixture>
+namespace EmployeeManagement.Test.Fixtures
 {
-
+    [CollectionDefinition("EmployeeServiceCollection")]
+    public class EmployeeServiceCollectionFixture 
+        : ICollectionFixture<EmployeeServiceFixture>
+    {
+    }
 }

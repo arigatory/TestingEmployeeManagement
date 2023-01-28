@@ -1,22 +1,33 @@
 ﻿using EmployeeManagement.Business;
+using EmployeeManagement.DataAccess.Services;
+using EmployeeManagement.Services.Test;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace EmployeeManagement.Test.Fixtures;
-
-public class EmployeeServiceFixture : IDisposable
+namespace EmployeeManagement.Test.Fixtures
 {
-    public EmployeeManagementTestDataRepository EmployeeManagementTestDataRepository { get; }
-    public EmployeeService EmployeeService { get; }
-
-    public EmployeeServiceFixture()
+    public class EmployeeServiceFixture : IDisposable
     {
-        EmployeeManagementTestDataRepository =
-            new EmployeeManagementTestDataRepository();
-        EmployeeService = new EmployeeService(
-            EmployeeManagementTestDataRepository, new EmployeeFactory());
-    }
+        public IEmployeeManagementRepository EmployeeManagementTestDataRepository
+            { get; }
+        public EmployeeService EmployeeService 
+            { get; }
 
-    public void Dispose()
-    {
-        // clean if need
+        public EmployeeServiceFixture()
+        {
+            EmployeeManagementTestDataRepository =
+                new EmployeeManagementTestDataRepository();
+            EmployeeService = new EmployeeService(
+                EmployeeManagementTestDataRepository,
+                new EmployeeFactory());
+        }
+
+        public void Dispose()
+        {
+           // clean up the setup code, if required
+        }
     }
 }

@@ -1,19 +1,26 @@
 ﻿using EmployeeManagement.DataAccess.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Xunit;
 
-namespace EmployeeManagement.Test;
-
-public class CourseTests
+namespace EmployeeManagement.Test
 {
-    [Fact]
-    public void CourseConstructor_ConsstructCourse_IsNewMustBeTrue()
+    public class CourseTests
     {
-        // Arrange
-        // nothing
+        [Fact]
+        public void CourseConstructor_ConstructCourse_IsNewMustBeTrue()
+        {
+            // Arrange
+            // nothing to see here
 
-        // Act
-        var course = new Course("C# Professional API Testing 101");
-        
-        // Assert
-        Assert.True(course.IsNew);
+            // Act
+            var course = new Course("Disaster Management 101");
+
+            // Assert
+            Assert.True(course.IsNew);
+        }
     }
 }

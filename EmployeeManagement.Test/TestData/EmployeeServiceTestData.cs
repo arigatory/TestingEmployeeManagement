@@ -1,17 +1,18 @@
 ﻿using System.Collections;
 
-namespace EmployeeManagement.Test.TestData;
-
-public class EmployeeServiceTestData : IEnumerable<object[]>
+namespace EmployeeManagement.Test.TestData
 {
-    public IEnumerator<object[]> GetEnumerator()
+    public class EmployeeServiceTestData : IEnumerable<object[]>
     {
-        yield return new object[] { 100, true };
-        yield return new object[] { 200, false };
-    }
+        public IEnumerator<object[]> GetEnumerator()
+        {
+            yield return new object[] { 100, true };
+            yield return new object[] { 200, false };
+        }
 
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 }
