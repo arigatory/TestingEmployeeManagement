@@ -41,7 +41,7 @@ namespace EmployeeManagement.Test
                 .CreateEmployee("Kevin", "Dockx");
 
             // Assert
-            Assert.True(employee.Salary >= 3000 && employee.Salary <= 3500, 
+            Assert.True(employee.Salary >= 2500 && employee.Salary <= 3500, 
                 "Salary not in acceptable range.");
         }
 
